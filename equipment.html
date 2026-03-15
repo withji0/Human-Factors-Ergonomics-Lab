@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>연구장비 | HumanFit Human Factors &amp; Ergonomics Laboratory</title>
+<meta content="HumanFit Human Factors &amp; Ergonomics Laboratory의 연구 장비 페이지입니다. 동작분석, EMG, 족압, 근력 및 인체계측 장비 정보를 확인할 수 있습니다." name="description"/>
+<meta content="index, follow" name="robots"/>
+<meta content="HumanFit Human Factors &amp; Ergonomics Laboratory" name="author"/>
+<meta content="#1d4ed8" name="theme-color"/>
+<link href="equipment.html" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="연구장비 | HumanFit Human Factors &amp; Ergonomics Laboratory" property="og:title"/>
+<meta content="HumanFit Human Factors &amp; Ergonomics Laboratory의 연구 장비 정보를 소개합니다." property="og:description"/>
+<meta content="ko_KR" property="og:locale"/>
+<meta content="equipment.html" property="og:url"/>
+<meta content="HumanFit Human Factors &amp; Ergonomics Laboratory" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="연구장비 | HumanFit Human Factors &amp; Ergonomics Laboratory" name="twitter:title"/>
+<meta content="HumanFit Human Factors &amp; Ergonomics Laboratory의 연구 장비 정보를 소개합니다." name="twitter:description"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --bg: #f3f3f3;
+            --surface: #ffffff;
+            --text: #111827;
+            --muted: #4b5563;
+            --line: #e5e7eb;
+            --primary: #1d4ed8;
+            --shadow: 0 10px 24px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.05);
+            --radius: 16px;
+            --container: 1180px;
+        }
+
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        .container {
+            width: min(var(--container), calc(100% - 48px));
+            margin: 0 auto;
+        }
+
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(229, 231, 235, 0.9);
+        }
+
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            min-height: 76px;
+        }
+
+        .nav-logo {
+            flex: 1 1 380px;
+            min-width: 280px;
+        }
+
+        .logo-text {
+            font-weight: 700;
+            font-size: 1.22rem;
+            letter-spacing: -0.02em;
+            color: var(--primary);
+            line-height: 1.2;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .logo-text:hover,
+        .logo-text:focus-visible {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            flex: 1 1 540px;
+        }
+
+        .menu-toggle {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(229, 231, 235, 0.95);
+            border-radius: 12px;
+            background: #ffffff;
+            color: #0f172a;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .menu-toggle:focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+
+        .menu-toggle-icon {
+            font-size: 1.3rem;
+            line-height: 1;
+        }
+
+        .nav-link {
+            font-size: 0.98rem;
+            font-weight: 600;
+            color: #1f2937;
+            transition: color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary);
+        }
+
+        .main-content {
+            padding: 44px 0 72px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin: 8px 0 56px;
+        }
+
+        .section-title {
+            margin: 0;
+            font-size: clamp(2.2rem, 4.8vw, 3rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 20px;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 62px;
+            height: 4px;
+            border-radius: 999px;
+            background: var(--primary);
+        }
+
+        .section-subtitle {
+            margin: 18px 0 0;
+            font-size: 1.05rem;
+            color: var(--muted);
+            font-weight: 500;
+        }
+
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 40px;
+        }
+
+        .equipment-card {
+            background: rgba(255,255,255,0.72);
+            border-radius: var(--radius);
+            padding: 36px 38px 40px;
+            box-shadow: var(--shadow);
+            border-top: 4px solid #2448f2;
+            min-height: 235px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .equipment-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 30px rgba(15, 23, 42, 0.10), 0 4px 8px rgba(15, 23, 42, 0.06);
+        }
+
+        .equipment-category {
+            font-size: 1.02rem;
+            font-weight: 700;
+            color: #1d4ed8;
+            margin-bottom: 14px;
+        }
+
+        .equipment-name {
+            margin: 0 0 18px;
+            font-size: clamp(1.55rem, 2vw, 1.9rem);
+            line-height: 1.18;
+            letter-spacing: -0.025em;
+            font-weight: 800;
+            color: #0f172a;
+        }
+
+        .equipment-description {
+            margin: 0;
+            font-size: 1rem;
+            color: #374151;
+            line-height: 1.75;
+            word-break: keep-all;
+        }
+
+        .footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            margin-top: 5rem;
+            border-top: none;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-line {
+            margin: 0.75rem 0;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            color: #ffffff;
+        }
+
+        .footer-line a {
+            color: #2453ff;
+            text-decoration: none;
+        }
+
+        .footer-line a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 1080px) {
+            .equipment-grid { gap: 28px; }
+            .equipment-card { padding: 32px; }
+            .nav-menu { gap: 14px; }
+        }
+
+        @media (max-width: 920px) {
+            .equipment-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .nav-content {
+                align-items: center;
+                padding: 16px 0;
+                gap: 12px;
+                flex-wrap: wrap;
+            }
+            .nav-logo {
+                flex: 1 1 auto;
+                min-width: 0;
+            }
+            .menu-toggle {
+                display: inline-flex;
+            }
+            .nav-menu {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 14px;
+                padding: 8px 0 2px;
+            }
+            .nav-menu.open {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                width: min(var(--container), calc(100% - 28px));
+            }
+
+            .main-content {
+                padding: 30px 0 52px;
+            }
+
+            .section-header {
+                margin-bottom: 34px;
+            }
+
+            .equipment-grid {
+                grid-template-columns: 1fr;
+                gap: 22px;
+            }
+
+            .equipment-card {
+                min-height: auto;
+                padding: 28px 24px 30px;
+            }
+
+            .logo-text {
+                font-size: 1.06rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-text {
+                white-space: normal;
+                line-height: 1.2;
+                font-size: 0.96rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav class="nav">
+<div class="container">
+<div class="nav-content">
+<div class="nav-logo">
+<a class="logo-text" href="index.html">HumanFit Human Factors &amp; Ergonomics Laboratory</a>
+</div>
+<button aria-controls="site-menu" aria-expanded="false" aria-label="메뉴 열기" class="menu-toggle" type="button">
+<span class="menu-toggle-icon">☰</span>
+</button>
+<div class="nav-menu" id="site-menu"><a class="nav-link" href="index.html">연구실 소개</a><a class="nav-link" href="professor.html">교수</a><a class="nav-link" href="students.html">구성원</a><a aria-current="page" class="nav-link active" href="equipment.html">연구장비</a><a class="nav-link" href="mentoring.html">학생지도</a><a class="nav-link" href="gallery.html">갤러리</a></div>
+</div>
+</div>
+</nav>
+<main class="main-content">
+<section class="equipment" id="equipment">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">연구 장비</h2>
+<p class="section-subtitle">Research Equipment</p>
+</div>
+<div class="equipment-grid">
+<div class="equipment-card">
+<div class="equipment-category">동작 분석</div>
+<h3 class="equipment-name">New Ultium Motion (16ch)</h3>
+<p class="equipment-description">실내외에서 인체 움직임을 측정하여 3D 동작 분석을 수행하는 최첨단 모션 캡처 시스템</p>
+</div>
+<div class="equipment-card">
+<div class="equipment-category">근활성도 측정</div>
+<h3 class="equipment-name">Ultium EMG System (8ch)</h3>
+<p class="equipment-description">근육의 활성도를 실시간으로 측정하는 8채널 근전도 시스템</p>
+</div>
+<div class="equipment-card">
+<div class="equipment-category">압력 분석</div>
+<h3 class="equipment-name">Ultium Insole Pressure Sensor</h3>
+<p class="equipment-description">인솔 방식의 압력분포 측정 시스템으로 보행 분석 연구에 활용</p>
+</div>
+<div class="equipment-card">
+<div class="equipment-category">근육 긴장도</div>
+<h3 class="equipment-name">MyotonPRO</h3>
+<p class="equipment-description">비침습적 방법으로 근육의 긴장도를 측정하고 근전도와 연동한 족압 분석</p>
+</div>
+<div class="equipment-card">
+<div class="equipment-category">근력 측정</div>
+<h3 class="equipment-name">activforce</h3>
+<p class="equipment-description">주요 근력 데이터를 측정하고 실시간 결과를 정량화하는 근력 측정 시스템</p>
+</div>
+<div class="equipment-card">
+<div class="equipment-category">인체 계측</div>
+<h3 class="equipment-name">Martin Anthropometer (Japan)</h3>
+<p class="equipment-description">마틴식 인체계측기로 이동형 인체측정이 가능한 정밀 계측 장비</p>
+</div>
+<div class="equipment-card">
+<div class="equipment-category">피하지방측정기</div>
+<h3 class="equipment-name">Skinfold Caliper</h3>
+<p class="equipment-description">인체 피하지방 두께를 측정하여 체지방률 제시</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="footer-content">
+<p class="footer-line">Wonkwang University HumanFit Human Factors &amp; Ergonomics Laboratory</p>
+<p class="footer-line">Dr. Jiyoung Park  TEL : +82-63-850-7362  e-mail : <a href="mailto:withji0@wku.ac.kr">withji0@wku.ac.kr</a></p>
+</div>
+</footer>
+<script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.getElementById('site-menu');
+
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                const isOpen = navMenu.classList.toggle('open');
+                menuToggle.setAttribute('aria-expanded', String(isOpen));
+                menuToggle.setAttribute('aria-label', isOpen ? '메뉴 닫기' : '메뉴 열기');
+            });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 920) {
+                    navMenu.classList.remove('open');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    menuToggle.setAttribute('aria-label', '메뉴 열기');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
