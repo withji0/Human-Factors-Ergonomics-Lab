@@ -1,27 +1,35 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="ko">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>안전인간공학연구실 | 구성원 | 원광대학교 안전보건학과</title>
-<meta content="원광대학교 안전보건학과 안전인간공학연구실 구성원 소개 페이지입니다. 대학원생과 학부생 연구참여 구성원을 확인할 수 있습니다." name="description"/>
+<title>안전인간공학연구실 | 업무협약 | 원광대학교 안전보건학과</title>
+<meta content="원광대학교 안전보건학과 안전인간공학연구실의 산학협력 및 업무협약 현황을 확인할 수 있습니다." name="description"/>
 <meta content="index, follow" name="robots"/>
 <meta content="Safety &amp; Ergonomics Laboratory" name="author"/>
 <meta content="#0029bd" name="theme-color"/>
-<link href="./students.html" rel="canonical"/>
+<link href="./partnership.html" rel="canonical"/>
 <meta content="website" property="og:type"/>
 <meta content="ko_KR" property="og:locale"/>
-<meta content="안전인간공학연구실 | 구성원" property="og:title"/>
-<meta content="원광대학교 안전보건학과 안전인간공학연구실 구성원 소개 페이지입니다." property="og:description"/>
-<meta content="./students.html" property="og:url"/>
+<meta content="안전인간공학연구실 | 업무협약" property="og:title"/>
+<meta content="원광대학교 안전보건학과 안전인간공학연구실의 산학협력 및 업무협약 현황을 확인할 수 있습니다." property="og:description"/>
+<meta content="./partnership.html" property="og:url"/>
 <meta content="Safety &amp; Ergonomics Laboratory" property="og:site_name"/>
 <meta content="summary" name="twitter:card"/>
-<meta content="안전인간공학연구실 | 구성원" name="twitter:title"/>
-<meta content="원광대학교 안전보건학과 안전인간공학연구실 구성원 소개 페이지입니다." name="twitter:description"/>
+<meta content="안전인간공학연구실 | 업무협약" name="twitter:title"/>
+<meta content="원광대학교 안전보건학과 안전인간공학연구실의 산학협력 및 업무협약 현황을 확인할 수 있습니다." name="twitter:description"/>
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
+        
+        /* Hero Responsive */
+        @media (max-width: 768px) {
+            .hero-contact {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
         /* ==========================================================================
            McKinsey Style CSS - Based on McKinsey Design System
            ========================================================================== */
@@ -162,27 +170,20 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: var(--spacing-lg);
-            min-height: 70px;
-            padding: 10px 0;
+            height: 70px;
         }
         
         .nav-logo .logo-text {
-            font-size: var(--font-size-lg);
+            font-size: var(--font-size-xl);
             font-weight: 700;
             color: var(--mckinsey-blue-primary);
             text-decoration: none;
-            line-height: 1.2;
-            display: inline-block;
         }
         
         .nav-menu {
             display: flex;
-            gap: var(--spacing-lg);
+            gap: var(--spacing-xl);
             list-style: none;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: flex-end;
         }
         
         .nav-link {
@@ -210,14 +211,6 @@
         }
         
         .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .nav-link--active {
-            color: var(--mckinsey-blue-primary);
-        }
-
-        .nav-link--active::after {
             width: 100%;
         }
         
@@ -331,30 +324,21 @@
         .hero {
             padding: var(--spacing-5xl) 0;
             background: linear-gradient(135deg, var(--mckinsey-blue-50) 0%, var(--mckinsey-white) 100%);
-            text-align: center;
             position: relative;
-            overflow: hidden;
         }
         
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%230029bd" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            z-index: 0;
-        }
-        
+
         .hero-content {
-            position: relative;
-            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         .hero-photo {
             margin-bottom: var(--spacing-xl);
-            display: inline-block;
         }
         
         .hero-photo-img {
@@ -386,6 +370,14 @@
             box-shadow: var(--shadow-xl);
         }
         
+        .hero-info {
+            text-align: center;
+        }
+
+        .hero-info {
+            text-align: center;
+        }
+
         .hero-title {
             margin-bottom: var(--spacing-sm);
         }
@@ -1157,20 +1149,6 @@
             gap: var(--spacing-xl);
             margin-top: var(--spacing-xl);
         }
-
-        .graduate-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            align-items: stretch;
-            gap: var(--spacing-xl);
-            margin-top: var(--spacing-xl);
-        }
-
-        .graduate-grid .student-card {
-            width: 220px;
-            flex: 0 0 220px;
-        }
         
         .student-card {
             background-color: var(--mckinsey-white);
@@ -1213,24 +1191,6 @@
             font-size: var(--font-size-sm);
             color: var(--mckinsey-blue-primary);
             font-weight: 500;
-        }
-
-        .student-group {
-            margin-bottom: var(--spacing-4xl);
-        }
-
-        .student-group-title {
-            font-size: var(--font-size-3xl);
-            font-weight: 700;
-            color: var(--mckinsey-gray-900);
-            margin-bottom: var(--spacing-sm);
-            letter-spacing: -0.02em;
-        }
-
-        .student-group-subtitle {
-            font-size: var(--font-size-base);
-            color: var(--mckinsey-gray-500);
-            margin-bottom: var(--spacing-lg);
         }
         
         .military-service {
@@ -1397,13 +1357,6 @@
         }
         
         @media (max-width: 480px) {
-            .nav-logo .logo-text,
-            .logo-text {
-                white-space: normal;
-                line-height: 1.2;
-                font-size: 0.9rem;
-            }
-
             .container {
                 padding: 0 var(--spacing-sm);
             }
@@ -1423,6 +1376,36 @@
                 text-align: center;
             }
         }
+    
+        .nav-logo .logo-text,
+        .logo-text {
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        .nav-link.active {
+            color: var(--mckinsey-blue-primary, var(--primary));
+        }
+
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        @media (max-width: 1024px) {
+            .nav-content {
+                gap: var(--spacing-md, 1rem);
+            }
+
+            .nav-menu {
+                gap: var(--spacing-lg, 1.25rem);
+            }
+
+            .nav-logo .logo-text,
+            .logo-text {
+                font-size: var(--font-size-lg, 1.05rem);
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -1432,7 +1415,7 @@
 <div class="nav-logo">
 <a class="logo-text" href="index.html">Safety &amp; Ergonomics Laboratory</a>
 </div>
-<div class="nav-menu" id="primary-navigation"><a class="nav-link" href="index.html">연구실 소개</a><a aria-current="page" class="nav-link nav-link--active" href="students.html">구성원</a><a class="nav-link" href="professor.html">연구</a><a class="nav-link" href="equipment.html">연구장비</a><a class="nav-link" href="mentoring.html">학생지도</a><a class="nav-link" href="gallery.html">갤러리</a><a class="nav-link" href="partnership.html">업무협약</a></div>
+<div class="nav-menu" id="primary-navigation"><a class="nav-link" href="index.html">연구실 소개</a><a class="nav-link" href="students.html">구성원</a><a class="nav-link" href="professor.html">연구</a><a class="nav-link" href="equipment.html">연구장비</a><a class="nav-link" href="mentoring.html">학생지도</a><a class="nav-link" href="gallery.html">갤러리</a><a aria-current="page" class="nav-link active" href="partnership.html">업무협약</a></div>
 <button aria-controls="primary-navigation" aria-expanded="false" aria-label="메뉴 열기" class="nav-toggle" type="button">
 <span></span>
 <span></span>
@@ -1441,174 +1424,52 @@
 </div>
 </div>
 </nav>
-<main class="main-content">
-<section class="section" id="mentoring">
+<section class="partnership" id="partnerships">
 <div class="container">
-<div class="guidance-content">
-<div class="student-group">
-<h2 class="student-group-title">교수</h2>
-<div class="student-card" style="display: flex; align-items: center; gap: var(--spacing-xl); text-align: left; max-width: 480px; padding: var(--spacing-lg);">
-<img alt="박지영" class="student-photo" onerror="this.style.display='none';" src="photos/박지영.jpg" style="width: 140px; height: 175px; margin: 0; flex-shrink: 0;"/>
-<div>
-<div class="student-name">박지영</div>
-<div class="student-year">원광대학교 안전보건학과 조교수</div>
-<div style="margin-top: 12px; font-size: var(--font-size-sm); color: var(--mckinsey-gray-600); line-height: 1.8;">
-<a href="mailto:withji0@wku.ac.kr" style="color: var(--mckinsey-blue-primary); text-decoration: none;">withji0@wku.ac.kr</a><br/>
-<a href="tel:063-850-7362" style="color: var(--mckinsey-blue-primary); text-decoration: none;">063-850-7362</a>
+<div class="section-header">
+<h2 class="section-title">업무협약</h2>
+<p class="section-subtitle">Partnership &amp; Collaboration</p>
 </div>
+<div class="partnership-grid">
+<div class="partnership-card">
+<div class="partnership-year">2026년</div>
+<h3 class="partnership-title">대한산업보건협회</h3>
+<p class="partnership-description">산업보건 분야 교육·연구·취업 연계 협력체계 구축을 위한 업무협약을 통해 산업보건 전문인력 양성과 현장 중심의 연구 협력을 추진하고 있습니다.</p>
+<a class="partnership-link" href="https://www.wku.ac.kr/%EC%82%B0%EC%97%85%EB%B3%B4%EA%B1%B4-%EB%B6%84%EC%95%BC-%EA%B5%90%EC%9C%A1%C2%B7%EC%97%B0%EA%B5%AC%C2%B7%EC%B7%A8%EC%97%85-%EC%97%B0%EA%B3%84-%ED%98%91%EB%A0%A5%EC%B2%B4%EA%B3%84-%EA%B5%AC%EC%B6%95.html" rel="noopener noreferrer" target="_blank">자세히 보기</a>
 </div>
+<div class="partnership-card">
+<div class="partnership-year">2025년</div>
+<h3 class="partnership-title">한국산업안전보건공단</h3>
+<p class="partnership-description">산업안전보건 역량 강화를 위한 업무협약을 통해 안전보건 전문인력 양성과 현장 중심의 연구 협력을 추진하고 있습니다.</p>
+<a class="partnership-link" href="https://www.wku.ac.kr/%ED%95%9C%EA%B5%AD%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EA%B3%B5%EB%8B%A8-%EC%98%88%EB%B9%84%EC%82%B0%EC%97%85%EC%9D%B8%EB%A0%A5-%EC%95%88%EC%A0%84%EC%97%AD%EB%9F%89-%EA%B0%95.html" rel="noopener noreferrer" target="_blank">자세히 보기</a>
 </div>
+<div class="partnership-card">
+<div class="partnership-year">2025년</div>
+<h3 class="partnership-title">고용노동부 · 현대자동차 · 산업안전상생재단</h3>
+<p class="partnership-description">안전 생태계 조성을 위한 산업안전 분야 민·관·학 업무협약을 통해 산업안전 전문인력 양성과 현장 중심의 연구 협력을 추진하고 있습니다.</p>
+<a class="partnership-link" href="https://www.wku.ac.kr/%EC%95%88%EC%A0%84-%EC%83%9D%ED%83%9C%EA%B3%84-%EC%A1%B0%EC%84%B1%EC%9C%84%ED%95%9C-%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84-%EB%B6%84%EC%95%BC-%EB%AF%BC%C2%B7%EA%B4%80%C2%B7%ED%95%99-%EC%97%85%EB%AC%B4.html" rel="noopener noreferrer" target="_blank">자세히 보기</a>
 </div>
-<div class="student-group">
-<h2 class="student-group-title">대학원생</h2>
-<div class="graduate-grid">
-
-<div class="student-card">
-<img alt="민상문" class="student-photo" onerror="this.style.display='none';" src="photos/민상문.jpg"/>
-<div class="student-name">민상문</div>
-<div class="student-year">박사과정(25년도 입학)</div>
+<div class="partnership-card">
+<div class="partnership-year">2025년</div>
+<h3 class="partnership-title">쿠팡풀필먼트서비스</h3>
+<p class="partnership-description">안전보건 인재 양성을 위한 산학협력 업무협약을 통해 실무중심의 교육과정 개발과 현장 전문가 양성에 협력하고 있습니다.</p>
+<a class="partnership-link" href="https://www.wku.ac.kr/%ec%bf%a0%ed%8c%a1%ed%92%80%ed%95%84%eb%a8%bc%ed%8a%b8%ec%84%9c%eb%b9%84%ec%8a%a4%ec%99%80-%ec%95%88%ec%a0%84%eb%b3%b4%ea%b1%b4-%ec%9d%b8%ec%9e%ac-%ec%96%91%ec%84%b1-%ed%98%91%ec%95%bd-%ec%b2%b4.html" rel="noopener noreferrer" target="_blank">자세히 보기</a>
 </div>
-<div class="student-card">
-<img alt="조성태" class="student-photo" onerror="this.style.display='none';" src="photos/조성태.jpg"/>
-<div class="student-name">조성태</div>
-<div class="student-year">박사과정(26년도 입학)</div>
-</div>
-</div>
-</div>
-<div class="student-group">
-<h2 class="student-group-title">학부연구생</h2>
-<div class="students-grid">
-<div class="student-card">
-<img alt="유은혜" class="student-photo" onerror="this.style.display='none';" src="photos/유은혜.jpg"/>
-<div class="student-name">유은혜</div>
-<div class="student-year">23학번</div>
-</div>
-<div class="student-card">
-<img alt="김용규" class="student-photo" onerror="this.style.display='none';" src="photos/김용규.jpg"/>
-<div class="student-name">김용규</div>
-<div class="student-year">23학번</div>
-</div>
-<div class="student-card">
-<img alt="박준영" class="student-photo" onerror="this.style.display='none';" src="photos/박준영.jpg"/>
-<div class="student-name">박준영</div>
-<div class="student-year">23학번</div>
-</div>
-<div class="student-card">
-<img alt="김건우" class="student-photo" onerror="this.style.display='none';" src="photos/김건우.jpg"/>
-<div class="student-name">김건우</div>
-<div class="student-year">26학번</div>
-</div>
-</div>
-</div>
-<div class="student-group">
-<h2 class="student-group-title">연구·프로젝트 참여 학부 학생</h2>
-<div class="students-grid">
-<div class="student-card">
-<img alt="황인철" class="student-photo" onerror="this.style.display='none';" src="photos/황인철.jpg"/>
-<div class="student-name">황인철</div>
-<div class="student-year">21학번</div>
-</div>
-<div class="student-card">
-<img alt="황윤성" class="student-photo" onerror="this.style.display='none';" src="photos/황윤성.png"/>
-<div class="student-name">황윤성</div>
-<div class="student-year">21학번</div>
-</div>
-<div class="student-card">
-<img alt="송준석" class="student-photo" onerror="this.style.display='none';" src="photos/송준석.jpg"/>
-<div class="student-name">송준석</div>
-<div class="student-year">22학번</div>
-</div>
-<div class="student-card">
-<img alt="은재호" class="student-photo" onerror="this.style.display='none';" src="photos/은재호.jpg"/>
-<div class="student-name">은재호(군휴학)</div>
-<div class="student-year">23학번</div>
-</div>
-<div class="student-card">
-<img alt="이나은" class="student-photo" onerror="this.style.display='none';" src="photos/이나은.jpg"/>
-<div class="student-name">이나은</div>
-<div class="student-year">23학번</div>
-</div>
-<div class="student-card">
-<img alt="임지흔" class="student-photo" onerror="this.style.display='none';" src="photos/임지흔.jpg"/>
-<div class="student-name">임지흔(휴학)</div>
-<div class="student-year">23학번</div>
-</div>
-<div class="student-card">
-<img alt="남다현" class="student-photo" onerror="this.style.display='none';" src="photos/남다현.jpg"/>
-<div class="student-name">남다현</div>
-<div class="student-year">23학번</div>
-</div>
-<div class="student-card">
-<img alt="김지훈" class="student-photo" onerror="this.style.display='none';" src="photos/김지훈.jpg"/>
-<div class="student-name">김지훈</div>
-<div class="student-year">23학번</div>
-</div>
-<div class="student-card">
-<img alt="고유림" class="student-photo" onerror="this.style.display='none';" src="photos/고유림.jpg"/>
-<div class="student-name">고유림(휴학)</div>
-<div class="student-year">24학번</div>
-</div>
-<div class="student-card">
-<img alt="박지현" class="student-photo" onerror="this.style.display='none';" src="photos/박지현.jpg"/>
-<div class="student-name">박지현</div>
-<div class="student-year">24학번</div>
-</div>
-<div class="student-card">
-<img alt="권자연" class="student-photo" onerror="this.style.display='none';" src="photos/권자연.jpg"/>
-<div class="student-name">권자연</div>
-<div class="student-year">24학번</div>
-</div>
-<div class="student-card">
-<img alt="김태하" class="student-photo" onerror="this.style.display='none';" src="photos/김태하.jpg"/>
-<div class="student-name">김태하</div>
-<div class="student-year">24학번</div>
-</div>
-<div class="student-card">
-<img alt="한승민" class="student-photo" onerror="this.style.display='none';" src="photos/한승민.jpg"/>
-<div class="student-name">한승민</div>
-<div class="student-year">24학번</div>
-</div>
-<div class="student-card">
-<img alt="김지환" class="student-photo" onerror="this.style.display='none';" src="photos/김지환.jpg"/>
-<div class="student-name">김지환</div>
-<div class="student-year">25학번</div>
-</div>
-<div class="student-card">
-<img alt="박승아" class="student-photo" onerror="this.style.display='none';" src="photos/박승아.jpg"/>
-<div class="student-name">박승아</div>
-<div class="student-year">25학번</div>
-</div>
-<div class="student-card">
-<img alt="박주향" class="student-photo" onerror="this.style.display='none';" src="photos/박주향.jpg"/>
-<div class="student-name">박주향</div>
-<div class="student-year">25학번</div>
-</div>
-<div class="student-card">
-<img alt="정석호" class="student-photo" onerror="this.style.display='none';" src="photos/정석호.jpg"/>
-<div class="student-name">정석호</div>
-<div class="student-year">25학번</div>
-</div>
-</div>
-<div class="guidance-category" style="background-color: #f0f7ff; padding: 30px; border-radius: 12px; margin-top: 40px; border-left: 4px solid #0029bd;">
-<h3 style="color: #0029bd; font-size: 20px; font-weight: 600; margin-bottom: 15px;">군복무 중인 학생</h3>
-<p style="color: #3c4043; font-size: 16px; line-height: 1.6; margin: 0;">
-                                이휘빈(23학번), 김건호(24학번), 심주언(24학번), 최현빈(24학번)은 현재 군복무 중입니다.
-                            </p>
-</div>
+<div class="partnership-card">
+<div class="partnership-year">2024년</div>
+<h3 class="partnership-title">보건복지부 국립재활원</h3>
+<p class="partnership-description">장애인 재활과 보건복지 향상을 위한 연구협력 및 인력교류를 통해 실무중심의 전문인력 양성과 현장연구를 활성화하고 있습니다.</p>
+<a class="partnership-link" href="https://www.wku.ac.kr/%EA%B5%AD%EB%A6%BD%EC%9E%AC%ED%99%9C%EC%9B%90%EA%B3%BC-%EC%83%81%ED%98%B8-%EA%B5%90%EB%A5%98-%EC%97%85%EB%AC%B4%ED%98%91%EC%95%BD-%EC%B2%B4%EA%B2%B0%EC%9B%90%EA%B4%91%EB%8C%80%ED%95%99%EA%B5%90.html" rel="noopener noreferrer" target="_blank">자세히 보기</a>
 </div>
 </div>
 </div>
 </section>
-</main>
-
-
 <footer class="footer">
 <div class="footer-content">
 <p class="footer-line">Wonkwang University Safety &amp; Ergonomics Laboratory</p>
-<p class="footer-line">Dr. Jiyoung Park&nbsp;&nbsp;TEL : +82-63-850-7362&nbsp;&nbsp;e-mail : <a href="mailto:withji0@wku.ac.kr">withji0@wku.ac.kr</a></p>
+<p class="footer-line">Dr. Jiyoung Park  TEL : +82-63-850-7362  e-mail : <a href="mailto:withji0@wku.ac.kr">withji0@wku.ac.kr</a></p>
 </div>
 </footer>
-
 <script>
         document.addEventListener('DOMContentLoaded', function() {
             initSmoothScrolling();
@@ -1623,39 +1484,36 @@
             const navLinks = document.querySelectorAll('.nav-link');
             
             if (navToggle && navMenu) {
+                const updateMenuState = function(isOpen) {
+                    navMenu.classList.toggle('nav-menu--open', isOpen);
+                    navToggle.classList.toggle('nav-toggle--open', isOpen);
+                    navToggle.setAttribute('aria-expanded', String(isOpen));
+                    navToggle.setAttribute('aria-label', isOpen ? '메뉴 닫기' : '메뉴 열기');
+                };
+
                 navToggle.addEventListener('click', function(e) {
                     e.preventDefault();
                     e.stopPropagation();
-                    
+
                     const isOpen = navMenu.classList.contains('nav-menu--open');
-                    
-                    if (isOpen) {
-                        navMenu.classList.remove('nav-menu--open');
-                        navToggle.classList.remove('nav-toggle--open');
-                    } else {
-                        navMenu.classList.add('nav-menu--open');
-                        navToggle.classList.add('nav-toggle--open');
-                    }
-                    
-                    navToggle.setAttribute('aria-expanded', String(!isOpen));
-                    navToggle.setAttribute('aria-label', !isOpen ? '메뉴 닫기' : '메뉴 열기');
+                    updateMenuState(!isOpen);
                 });
-                
+
                 navLinks.forEach(link => {
                     link.addEventListener('click', () => {
-                        navMenu.classList.remove('nav-menu--open');
-                        navToggle.classList.remove('nav-toggle--open');
-                        navToggle.setAttribute('aria-expanded', 'false');
-                        navToggle.setAttribute('aria-label', '메뉴 열기');
+                        updateMenuState(false);
                     });
                 });
-                
+
                 document.addEventListener('click', function(e) {
                     if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-                        navMenu.classList.remove('nav-menu--open');
-                        navToggle.classList.remove('nav-toggle--open');
-                        navToggle.setAttribute('aria-expanded', 'false');
-                        navToggle.setAttribute('aria-label', '메뉴 열기');
+                        updateMenuState(false);
+                    }
+                });
+
+                window.addEventListener('resize', function() {
+                    if (window.innerWidth > 768) {
+                        updateMenuState(false);
                     }
                 });
             }
