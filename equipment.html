@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="ko">
 <head>
@@ -8,224 +8,974 @@
 <meta content="Safety &amp; Ergonomics Laboratory의 연구 장비 페이지입니다. 동작분석, EMG, 족압, 근력 및 인체계측 장비 정보를 확인할 수 있습니다." name="description"/>
 <meta content="index, follow" name="robots"/>
 <meta content="Safety &amp; Ergonomics Laboratory" name="author"/>
-<meta content="#1d4ed8" name="theme-color"/>
-<link href="equipment.html" rel="canonical"/>
+<meta content="#0029bd" name="theme-color"/>
+<link href="./equipment.html" rel="canonical"/>
 <meta content="website" property="og:type"/>
+<meta content="ko_KR" property="og:locale"/>
 <meta content="연구장비 | Safety &amp; Ergonomics Laboratory" property="og:title"/>
 <meta content="Safety &amp; Ergonomics Laboratory의 연구 장비 정보를 소개합니다." property="og:description"/>
-<meta content="ko_KR" property="og:locale"/>
-<meta content="equipment.html" property="og:url"/>
+<meta content="./equipment.html" property="og:url"/>
 <meta content="Safety &amp; Ergonomics Laboratory" property="og:site_name"/>
 <meta content="summary" name="twitter:card"/>
 <meta content="연구장비 | Safety &amp; Ergonomics Laboratory" name="twitter:title"/>
 <meta content="Safety &amp; Ergonomics Laboratory의 연구 장비 정보를 소개합니다." name="twitter:description"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
+        
+        /* Hero Responsive */
+        @media (max-width: 768px) {
+            .hero-contact {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        /* ==========================================================================
+           McKinsey Style CSS - Based on McKinsey Design System
+           ========================================================================== */
+        
+        /* CSS Variables - McKinsey Color Palette */
         :root {
-            --bg: #f3f3f3;
-            --surface: #ffffff;
-            --text: #111827;
-            --muted: #4b5563;
-            --line: #e5e7eb;
-            --primary: #1d4ed8;
-            --shadow: 0 10px 24px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.05);
-            --radius: 16px;
-            --container: 1180px;
+            /* Primary McKinsey Blue */
+            --mckinsey-blue-primary: #0029bd;
+            --mckinsey-blue-deep: #001e8a;
+            --mckinsey-blue-light: #2453ff;
+            --mckinsey-blue-50: #f0f3ff;
+            --mckinsey-blue-100: #bdcbff;
+            --mckinsey-blue-200: #8aa3ff;
+            
+            /* Brand Identity Colors */
+            --identity-purple: #6a0dad;
+            --identity-purple-light: #8a2be2;
+            --identity-purple-bg: #f3e8ff;
+            
+            /* Health & Safety Colors */
+            --health-green: #006400;
+            --health-green-light: #228b22;
+            --health-green-bg: #e8f5e8;
+            
+            /* Neutral Colors */
+            --mckinsey-white: #ffffff;
+            --mckinsey-gray-50: #f8f9fa;
+            --mckinsey-gray-100: #f1f3f4;
+            --mckinsey-gray-200: #e8eaed;
+            --mckinsey-gray-300: #dadce0;
+            --mckinsey-gray-400: #9aa0a6;
+            --mckinsey-gray-500: #5f6368;
+            --mckinsey-gray-600: #3c4043;
+            --mckinsey-gray-700: #202124;
+            --mckinsey-gray-800: #1a1a1a;
+            --mckinsey-gray-900: #0d1117;
+            
+            /* Patent Status Colors */
+            --patent-registered: #4caf50;
+            --patent-registered-bg: #e8f5e8;
+            --patent-decided: #2196f3;
+            --patent-decided-bg: #e3f2fd;
+            
+            /* Typography */
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-size-xs: 0.75rem;
+            --font-size-sm: 0.875rem;
+            --font-size-base: 1rem;
+            --font-size-lg: 1.125rem;
+            --font-size-xl: 1.25rem;
+            --font-size-2xl: 1.5rem;
+            --font-size-3xl: 1.875rem;
+            --font-size-4xl: 2.25rem;
+            --font-size-5xl: 3rem;
+            --font-size-6xl: 3.75rem;
+            
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 0.75rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            --spacing-2xl: 2.5rem;
+            --spacing-3xl: 3rem;
+            --spacing-4xl: 4rem;
+            --spacing-5xl: 5rem;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            
+            /* Border Radius */
+            --radius-sm: 0.25rem;
+            --radius-md: 0.375rem;
+            --radius-lg: 0.5rem;
+            --radius-xl: 0.75rem;
+            --radius-2xl: 1rem;
+            --radius-full: 9999px;
+            
+            /* Transitions */
+            --transition-fast: 150ms ease-in-out;
+            --transition-normal: 250ms ease-in-out;
+            --transition-slow: 350ms ease-in-out;
         }
-
-        * { box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-
-        body {
+        
+        /* Reset and Base Styles */
+        * {
             margin: 0;
-            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: var(--bg);
-            color: var(--text);
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: var(--font-primary);
+            font-size: var(--font-size-base);
             line-height: 1.6;
+            color: var(--mckinsey-gray-700);
+            background-color: var(--mckinsey-white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-
-        a { color: inherit; text-decoration: none; }
-
+        
+        /* Container */
         .container {
-            width: min(var(--container), calc(100% - 48px));
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 0 var(--spacing-lg);
         }
-
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 var(--spacing-md);
+            }
+        }
+        
+        /* ==========================================================================
+           Navigation Styles
+           ========================================================================== */
         .nav {
-            position: sticky;
+            position: fixed;
             top: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--mckinsey-white);
+            box-shadow: var(--shadow-sm);
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(229, 231, 235, 0.9);
+            transition: all var(--transition-normal);
         }
-
+        
         .nav-content {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 24px;
-            min-height: 76px;
+            height: 70px;
         }
-
-        .nav-logo {
-            flex: 1 1 380px;
-            min-width: 280px;
-        }
-
-        .logo-text {
+        
+        .nav-logo .logo-text {
+            font-size: var(--font-size-xl);
             font-weight: 700;
-            font-size: 1.22rem;
-            letter-spacing: -0.02em;
-            color: var(--primary);
-            line-height: 1.2;
-            display: inline-block;
+            color: var(--mckinsey-blue-primary);
             text-decoration: none;
         }
-
-        .logo-text:hover,
-        .logo-text:focus-visible {
-            color: var(--primary);
-            text-decoration: none;
-        }
-
+        
         .nav-menu {
             display: flex;
-            align-items: center;
-            gap: 18px;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            flex: 1 1 540px;
+            gap: var(--spacing-xl);
+            list-style: none;
         }
-
-        .menu-toggle {
+        
+        .nav-link {
+            color: var(--mckinsey-gray-600);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: var(--font-size-sm);
+            transition: color var(--transition-fast);
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: var(--mckinsey-blue-primary);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--mckinsey-blue-primary);
+            transition: width var(--transition-fast);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Mobile Navigation */
+        .nav-toggle {
             display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: var(--spacing-xs);
+        }
+        
+        .nav-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--mckinsey-gray-600);
+            margin: 3px 0;
+            transition: all var(--transition-fast);
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background-color: var(--mckinsey-white);
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: var(--spacing-3xl);
+                transition: left var(--transition-normal);
+                box-shadow: var(--shadow-lg);
+            }
+            
+            .nav-menu.nav-menu--open {
+                left: 0;
+            }
+            
+            .nav-toggle {
+                display: flex;
+            }
+            
+            .nav-toggle.nav-toggle--open span:nth-child(1) {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+            
+            .nav-toggle.nav-toggle--open span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .nav-toggle.nav-toggle--open span:nth-child(3) {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+        }
+        
+        /* ==========================================================================
+           Lab Banner Section
+           ========================================================================== */
+        .lab-banner {
+            background: linear-gradient(135deg, var(--mckinsey-blue-primary) 0%, var(--mckinsey-blue-deep) 100%);
+            color: var(--mckinsey-white);
+            padding: calc(70px + var(--spacing-xl)) 0 var(--spacing-xl) 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .lab-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="labgrid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="%23ffffff" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23labgrid)"/></svg>');
+            z-index: 0;
+        }
+        
+        .lab-banner-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .lab-title {
+            font-size: var(--font-size-5xl);
+            font-weight: 800;
+            margin-bottom: var(--spacing-sm);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .lab-subtitle {
+            font-size: var(--font-size-2xl);
+            font-weight: 400;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .lab-title {
+                font-size: var(--font-size-3xl);
+            }
+            
+            .lab-subtitle {
+                font-size: var(--font-size-lg);
+            }
+        }
+        
+        /* ==========================================================================
+           Hero Section
+           ========================================================================== */
+        .hero {
+            padding: var(--spacing-5xl) 0;
+            background: linear-gradient(135deg, var(--mckinsey-blue-50) 0%, var(--mckinsey-white) 100%);
+            position: relative;
+        }
+        
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero-photo {
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .hero-photo-img {
+            width: 200px;
+            height: 260px;
+            border-radius: var(--radius-lg);
+            object-fit: cover;
+            object-position: center;
+            box-shadow: var(--shadow-xl);
+            border: 4px solid var(--mckinsey-white);
+            transition: transform var(--transition-normal);
+        }
+        
+        .hero-photo-img:hover {
+            transform: scale(1.05);
+        }
+        
+        .hero-photo-placeholder {
+            display: none;
+            width: 200px;
+            height: 260px;
+            border-radius: var(--radius-lg);
+            background: linear-gradient(135deg, var(--mckinsey-blue-primary), var(--mckinsey-blue-light));
             align-items: center;
             justify-content: center;
-            width: 44px;
-            height: 44px;
-            border: 1px solid rgba(229, 231, 235, 0.95);
-            border-radius: 12px;
-            background: #ffffff;
-            color: #0f172a;
-            cursor: pointer;
-            flex-shrink: 0;
+            color: var(--mckinsey-white);
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+            box-shadow: var(--shadow-xl);
         }
-
-        .menu-toggle:focus-visible {
-            outline: 2px solid var(--primary);
-            outline-offset: 2px;
-        }
-
-        .menu-toggle-icon {
-            font-size: 1.3rem;
-            line-height: 1;
-        }
-
-        .nav-link {
-            font-size: 0.98rem;
-            font-weight: 600;
-            color: #1f2937;
-            transition: color 0.2s ease;
-            white-space: nowrap;
-        }
-
-        .nav-link:hover,
-        .nav-link.active {
-            color: var(--primary);
-        }
-
-        .main-content {
-            padding: 44px 0 72px;
-        }
-
-        .section-header {
+        
+        .hero-info {
             text-align: center;
-            margin: 8px 0 56px;
         }
 
-        .section-title {
-            margin: 0;
-            font-size: clamp(2.2rem, 4.8vw, 3rem);
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            line-height: 1.15;
-            position: relative;
+        .hero-info {
+            text-align: center;
+        }
+
+        .hero-title {
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .hero-name-ko {
+            display: block;
+            font-size: var(--font-size-4xl);
+            font-weight: 700;
+            color: var(--mckinsey-gray-800);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .hero-subtitle {
+            font-size: var(--font-size-lg);
+            color: var(--mckinsey-gray-600);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .hero-contact {
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .hero-contact-item {
             display: inline-block;
-            padding-bottom: 20px;
-        }
-
-        .section-title::after {
-            content: "";
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: 0;
-            width: 62px;
-            height: 4px;
-            border-radius: 999px;
-            background: var(--primary);
-        }
-
-        .section-subtitle {
-            margin: 18px 0 0;
-            font-size: 1.05rem;
-            color: var(--muted);
+            margin: 0 var(--spacing-lg);
+            font-size: var(--font-size-base);
+            color: var(--mckinsey-blue-primary);
             font-weight: 500;
         }
-
+        
+        .hero-contact-item a {
+            color: inherit;
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        
+        .hero-contact-item a:hover {
+            color: var(--mckinsey-blue-deep);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-contact-item {
+                display: block;
+                margin: var(--spacing-xs) 0;
+            }
+            
+            .hero-photo-img,
+            .hero-photo-placeholder {
+                width: 150px;
+                height: 195px;
+            }
+        }
+        
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-md) var(--spacing-xl);
+            border: none;
+            border-radius: var(--radius-lg);
+            font-size: var(--font-size-base);
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn--primary {
+            background-color: var(--mckinsey-blue-primary);
+            color: var(--mckinsey-white);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn--primary:hover {
+            background-color: var(--mckinsey-blue-deep);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* ==========================================================================
+           Section Styles
+           ========================================================================== */
+        section {
+            padding: var(--spacing-5xl) 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-4xl);
+        }
+        
+        .section-title {
+            font-size: var(--font-size-4xl);
+            font-weight: 700;
+            color: var(--mckinsey-gray-800);
+            margin-bottom: var(--spacing-md);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--mckinsey-blue-primary);
+            border-radius: var(--radius-full);
+        }
+        
+        .section-subtitle {
+            font-size: var(--font-size-lg);
+            color: var(--mckinsey-gray-500);
+            font-weight: 400;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--mckinsey-gray-50);
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* 연구실 로고 스타일 */
+        .lab-logo {
+            text-align: center;
+            margin-bottom: var(--spacing-3xl);
+        }
+        
+        .lab-logo-img {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+            transition: transform var(--transition-normal);
+        }
+        
+        .lab-logo-img:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            .lab-logo-img {
+                max-width: 300px;
+            }
+        }
+        
+        .about-text {
+            margin-bottom: var(--spacing-2xl);
+        }
+        
+        .about-text p {
+            font-size: var(--font-size-lg);
+            line-height: 1.8;
+            margin-bottom: var(--spacing-lg);
+            color: var(--mckinsey-gray-600);
+        }
+        
+        /* 강조 텍스트 스타일 - 안전인간공학연구실명을 파란색으로 변경 */
+        .identity-text {
+            color: var(--mckinsey-blue-primary);
+            text-decoration: none;
+            font-weight: 600;
+            cursor: default;
+            transition: all var(--transition-fast);
+        }
+        
+        .identity-text:hover {
+            color: var(--mckinsey-blue-deep);
+        }
+        
+        /* 인간공학 링크를 더 진한 오렌지색으로 변경하여 구분 */
+        .ergonomics-link {
+            color: #ff6600;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid transparent;
+            transition: all var(--transition-fast);
+        }
+        
+        .ergonomics-link:hover {
+            color: #e55a00;
+            border-bottom-color: #e55a00;
+        }
+        
+        .health-text {
+            color: var(--health-green);
+            text-decoration: none;
+            font-weight: 600;
+            cursor: default;
+            transition: all var(--transition-fast);
+        }
+        
+        .health-text:hover {
+            color: var(--health-green-light);
+        }
+        
+        .about-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            justify-content: center;
+        }
+        
+        .keyword-tag {
+            background-color: var(--mckinsey-blue-50);
+            color: var(--mckinsey-blue-primary);
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border-radius: var(--radius-full);
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            border: 2px solid var(--mckinsey-blue-100);
+            transition: all var(--transition-fast);
+        }
+        
+        .keyword-tag:hover {
+            background-color: var(--mckinsey-blue-primary);
+            color: var(--mckinsey-white);
+            transform: translateY(-2px);
+        }
+        
+        /* ==========================================================================
+           Equipment Section
+           ========================================================================== */
+        .equipment {
+            background-color: var(--mckinsey-white);
+        }
+        
         .equipment-grid {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-2xl);
         }
-
+        
         .equipment-card {
-            background: rgba(255,255,255,0.72);
-            border-radius: var(--radius);
-            padding: 36px 38px 40px;
-            box-shadow: var(--shadow);
-            border-top: 4px solid #2448f2;
-            min-height: 235px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            background-color: var(--mckinsey-gray-50);
+            padding: var(--spacing-2xl);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+            border: 1px solid var(--mckinsey-gray-200);
+            position: relative;
+            overflow: hidden;
         }
-
+        
+        .equipment-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--mckinsey-blue-primary), var(--mckinsey-blue-light));
+        }
+        
         .equipment-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 14px 30px rgba(15, 23, 42, 0.10), 0 4px 8px rgba(15, 23, 42, 0.06);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
         }
-
+        
         .equipment-category {
-            font-size: 1.02rem;
-            font-weight: 700;
-            color: #1d4ed8;
-            margin-bottom: 14px;
+            font-size: var(--font-size-sm);
+            color: var(--mckinsey-blue-primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--spacing-sm);
         }
-
+        
         .equipment-name {
-            margin: 0 0 18px;
-            font-size: clamp(1.55rem, 2vw, 1.9rem);
-            line-height: 1.18;
-            letter-spacing: -0.025em;
-            font-weight: 800;
-            color: #0f172a;
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            color: var(--mckinsey-gray-800);
+            margin-bottom: var(--spacing-md);
+            line-height: 1.3;
         }
-
+        
         .equipment-description {
-            margin: 0;
-            font-size: 1rem;
-            color: #374151;
-            line-height: 1.75;
-            word-break: keep-all;
+            color: var(--mckinsey-gray-600);
+            line-height: 1.6;
+        }
+        
+        /* ==========================================================================
+           Awards Section
+           ========================================================================== */
+        .awards {
+            background-color: var(--mckinsey-gray-50);
+        }
+        
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .award-item {
+            background-color: var(--mckinsey-white);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            font-weight: 500;
+            color: var(--mckinsey-gray-700);
+            transition: all var(--transition-fast);
+            border-left: 4px solid var(--mckinsey-blue-primary);
+        }
+        
+        .award-item:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        /* Publications Section */
+        .publications {
+            background-color: var(--mckinsey-white);
+        }
+        
+        .publications-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .publications-card {
+            background-color: var(--mckinsey-blue-50);
+            padding: var(--spacing-4xl);
+            border-radius: var(--radius-2xl);
+            border: 2px solid var(--mckinsey-blue-100);
+        }
+        
+        .publications-icon {
+            font-size: var(--font-size-5xl);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .publications-title {
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+            color: var(--mckinsey-gray-800);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .publications-description {
+            color: var(--mckinsey-gray-600);
+            margin-bottom: var(--spacing-xl);
+            line-height: 1.7;
+        }
+        
+        .publications-card a {
+            display: inline-flex;
+            align-items: center;
+            padding: var(--spacing-md) var(--spacing-xl);
+            background-color: var(--mckinsey-blue-primary);
+            color: var(--mckinsey-white);
+            text-decoration: none;
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            transition: all var(--transition-fast);
+        }
+        
+        .publications-card a:hover {
+            background-color: var(--mckinsey-blue-deep);
+            transform: translateY(-2px);
+        }
+        
+        /* Books Section */
+        .books {
+            background-color: var(--mckinsey-gray-50);
+        }
+        
+        .publications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-xl);
+        }
+        
+        .publication-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-lg);
+            background-color: var(--mckinsey-white);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-fast);
+            border: 1px solid var(--mckinsey-gray-200);
+        }
+        
+        .publication-item:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        
+        .publication-number {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background-color: var(--mckinsey-blue-primary);
+            color: var(--mckinsey-white);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: var(--font-size-sm);
+        }
+        
+        .publication-content {
+            flex: 1;
+        }
+        
+        .publication-title {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            color: var(--mckinsey-gray-800);
+            margin-bottom: var(--spacing-xs);
+            line-height: 1.4;
+        }
+        
+        .publication-details {
+            font-size: var(--font-size-sm);
+            color: var(--mckinsey-gray-500);
+        }
+        
+        /* Patents Section */
+        .patents {
+            background-color: var(--mckinsey-white);
+        }
+        
+        .patents-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: var(--spacing-xl);
+        }
+        
+        .patent-item {
+            background-color: var(--mckinsey-gray-50);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-lg);
+            transition: all var(--transition-fast);
+        }
+        
+        .patent-item:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        
+        .patent-status {
+            flex-shrink: 0;
+            padding: var(--spacing-xs) var(--spacing-md);
+            border-radius: var(--radius-full);
+            font-size: var(--font-size-xs);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .patent-item.registered .patent-status {
+            background-color: var(--patent-registered-bg);
+            color: var(--patent-registered);
+            border: 1px solid var(--patent-registered);
+        }
+        
+        .patent-item.decided .patent-status {
+            background-color: var(--patent-decided-bg);
+            color: var(--patent-decided);
+            border: 1px solid var(--patent-decided);
+        }
+        
+        .patent-content {
+            flex: 1;
+        }
+        
+        .patent-title {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            color: var(--mckinsey-gray-800);
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.4;
+        }
+        
+        .patent-description {
+            font-size: var(--font-size-sm);
+            color: var(--mckinsey-gray-500);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        /* Student Guidance Section */
+        .student-guidance {
+            background-color: var(--mckinsey-gray-50);
         }
 
-        .footer {
-            background-color: #1a1a1a;
-            color: #ffffff;
-            padding: 2.5rem 1.5rem;
+        /* Gallery Section */
+        .gallery-section {
+            background-color: var(--mckinsey-gray-50);
+            padding: var(--spacing-5xl) var(--spacing-2xl);
+        }
+
+        .gallery-section .section-header {
             text-align: center;
-            margin-top: 5rem;
-            border-top: none;
+            margin-bottom: var(--spacing-4xl);
+        }
+
+        .gallery-section h2 {
+            color: var(--mckinsey-blue-primary);
+            font-size: var(--font-size-4xl);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .gallery-section .section-subtitle {
+            color: var(--mckinsey-gray-500);
+            font-size: var(--font-size-lg);
+        }
+
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-2xl);
+        }
+
+        .gallery-item {
+            background-color: var(--mckinsey-white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--duration-normal) var(--ease-standard), 
+                        box-shadow var(--duration-normal) var(--ease-standard);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .gallery-item-wide {
+            grid-column: 1 / 2;
+        }
+
+        .gallery-image-wrapper {
+            width: 100%;
+            padding-top: 100%;
+            position: relative;
+            background-color: var(--mckinsey-gray-100);
+            overflow: hidden;
+        }
+
+        .gallery-image-wrapper-wide {
+            width: 100%;
+            padding-top: 60%;
+            position: relative;
+            background-color: var(--mckinsey-gray-100);
+            overflow: hidden;
+        }
+
+        .gallery-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background-color: var(--mckinsey-gray-50);
+        }
+
+        .gallery-caption {
+            padding: var(--spacing-lg) var(--spacing-md);
+            text-align: center;
+            font-size: var(--font-size-md);
+            font-weight: 500;
+            color: var(--mckinsey-gray-700);
+            border-top: 1px solid var(--mckinsey-gray-200);
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: var(--mckinsey-gray-800);
+            color: var(--mckinsey-white);
+            padding: var(--spacing-2xl);
+            text-align: center;
+            margin-top: var(--spacing-5xl);
         }
 
         .footer-content {
@@ -234,14 +984,13 @@
         }
 
         .footer-line {
-            margin: 0.75rem 0;
-            font-size: 0.875rem;
+            margin: var(--spacing-sm) 0;
+            font-size: var(--font-size-sm);
             line-height: 1.6;
-            color: #ffffff;
         }
 
         .footer-line a {
-            color: #2453ff;
+            color: var(--mckinsey-blue-light);
             text-decoration: none;
         }
 
@@ -249,76 +998,414 @@
             text-decoration: underline;
         }
 
-        @media (max-width: 1080px) {
-            .equipment-grid { gap: 28px; }
-            .equipment-card { padding: 32px; }
-            .nav-menu { gap: 14px; }
-        }
-
-        @media (max-width: 920px) {
-            .equipment-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-            .nav-content {
-                align-items: center;
-                padding: 16px 0;
-                gap: 12px;
-                flex-wrap: wrap;
-            }
-            .nav-logo {
-                flex: 1 1 auto;
-                min-width: 0;
-            }
-            .menu-toggle {
-                display: inline-flex;
-            }
-            .nav-menu {
-                display: none;
-                width: 100%;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: flex-start;
-                gap: 14px;
-                padding: 8px 0 2px;
-            }
-            .nav-menu.open {
-                display: flex;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .container {
-                width: min(var(--container), calc(100% - 28px));
-            }
-
-            .main-content {
-                padding: 30px 0 52px;
-            }
-
-            .section-header {
-                margin-bottom: 34px;
-            }
-
-            .equipment-grid {
+        @media (max-width: 768px) {
+            .gallery-grid {
                 grid-template-columns: 1fr;
-                gap: 22px;
+                gap: var(--spacing-lg);
             }
 
-            .equipment-card {
-                min-height: auto;
-                padding: 28px 24px 30px;
+            .gallery-section {
+                padding: var(--spacing-3xl) var(--spacing-lg);
             }
 
-            .logo-text {
-                font-size: 1.06rem;
+            .gallery-section h2 {
+                font-size: var(--font-size-3xl);
+            }
+
+            .gallery-item-wide {
+                grid-column: 1 / -1;
+            }
+
+            .gallery-image-wrapper-wide {
+                padding-top: 50%;
             }
         }
+        
+        .guidance-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .guidance-category {
+            margin-top: var(--spacing-4xl);
+            margin-bottom: var(--spacing-4xl);
+        }
 
+        .guidance-category:first-of-type {
+            margin-top: 0;
+        }
+        
+        .guidance-category-title {
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+            color: var(--mckinsey-blue-primary);
+            margin-bottom: var(--spacing-xl);
+            padding-bottom: var(--spacing-sm);
+            border-bottom: 3px solid var(--mckinsey-blue-100);
+        }
+        
+        .guidance-year-section {
+            margin-bottom: var(--spacing-2xl);
+        }
+        
+        .guidance-year {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            color: var(--mckinsey-gray-700);
+            margin-bottom: var(--spacing-lg);
+            padding-left: var(--spacing-md);
+            border-left: 4px solid var(--mckinsey-blue-primary);
+        }
+        
+        .mentoring-item,
+        .research-item,
+        .intern-item,
+        .startup-item,
+        .work-experience-item {
+            background-color: var(--mckinsey-white);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--spacing-lg);
+            border: 1px solid var(--mckinsey-gray-200);
+        }
+        
+        .mentoring-team,
+        .research-project,
+        .intern-name,
+        .startup-name,
+        .work-project {
+            font-weight: 600;
+            color: var(--mckinsey-gray-800);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .mentoring-details,
+        .research-students,
+        .intern-details,
+        .startup-details {
+            color: var(--mckinsey-gray-600);
+            line-height: 1.6;
+        }
+        
+        .work-link {
+            display: inline-block;
+            margin-top: var(--spacing-sm);
+            color: var(--mckinsey-blue-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .work-link:hover {
+            text-decoration: underline;
+        }
+        
+        .mentoring-photos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+        
+        .mentoring-photo-card {
+            background-color: var(--mckinsey-white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: all var(--transition-fast);
+            border: 1px solid var(--mckinsey-gray-200);
+        }
+        
+        .mentoring-photo-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        
+        .mentoring-photo {
+            width: 100%;
+            max-width: 400px;
+            height: 250px;
+            border-radius: var(--radius-lg);
+            object-fit: cover;
+            margin-bottom: var(--spacing-md);
+            border: 2px solid var(--mckinsey-blue-100);
+            transition: transform var(--transition-fast);
+        }
+        
+        .mentoring-photo:hover {
+            transform: scale(1.02);
+        }
+        
+        .mentoring-photo-caption {
+            font-size: var(--font-size-sm);
+            color: var(--mckinsey-gray-600);
+            font-weight: 500;
+            line-height: 1.4;
+        }
+        
+        .students-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-xl);
+        }
+        
+        .student-card {
+            background-color: var(--mckinsey-white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: all var(--transition-fast);
+            border: 1px solid var(--mckinsey-gray-200);
+        }
+        
+        .student-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        
+        .student-photo {
+            width: 120px;
+            height: 150px;
+            border-radius: var(--radius-lg);
+            object-fit: cover;
+            object-position: center top;
+            margin: 0 auto var(--spacing-md);
+            border: 3px solid var(--mckinsey-blue-100);
+            transition: transform var(--transition-fast);
+        }
+        
+        .student-photo:hover {
+            transform: scale(1.05);
+        }
+        
+        .student-name {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            color: var(--mckinsey-gray-800);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .student-year {
+            font-size: var(--font-size-sm);
+            color: var(--mckinsey-blue-primary);
+            font-weight: 500;
+        }
+        
+        .military-service {
+            margin-top: var(--spacing-xl);
+            padding: var(--spacing-lg);
+            background-color: var(--mckinsey-gray-100);
+            border-radius: var(--radius-lg);
+            border-left: 4px solid var(--mckinsey-blue-primary);
+        }
+        
+        .military-service h4 {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            color: var(--mckinsey-gray-800);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .military-service p {
+            color: var(--mckinsey-gray-600);
+            line-height: 1.6;
+        }
+        
+        /* Partnership Section */
+        .partnership {
+            background-color: var(--mckinsey-white);
+            position: relative;
+        }
+        
+        .partnership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: var(--spacing-2xl);
+        }
+        
+        .partnership-card {
+            background-color: var(--mckinsey-gray-50);
+            padding: var(--spacing-2xl);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+            border: 1px solid var(--mckinsey-gray-200);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .partnership-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--mckinsey-blue-primary), var(--mckinsey-blue-light));
+        }
+        
+        .partnership-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .partnership-year {
+            font-size: var(--font-size-sm);
+            color: var(--mckinsey-blue-primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .partnership-title {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            color: var(--mckinsey-gray-800);
+            margin-bottom: var(--spacing-md);
+            line-height: 1.3;
+        }
+        
+        .partnership-description {
+            color: var(--mckinsey-gray-600);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .partnership-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--mckinsey-blue-primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: var(--font-size-sm);
+            transition: all var(--transition-fast);
+        }
+        
+        .partnership-link:hover {
+            color: var(--mckinsey-blue-deep);
+            transform: translateX(3px);
+        }
+        
+        .partnership-link::after {
+            content: '→';
+            margin-left: var(--spacing-xs);
+            transition: all var(--transition-fast);
+        }
+        
+        .partnership-link:hover::after {
+            transform: translateX(3px);
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--mckinsey-gray-800);
+            color: var(--mckinsey-white);
+            padding: var(--spacing-2xl) 0;
+            text-align: center;
+        }
+        
+        .footer-content p {
+            margin: 0;
+            color: var(--mckinsey-gray-300);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .equipment-grid,
+            .partnership-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+            
+            .mentoring-photos {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: var(--font-size-3xl);
+            }
+            
+            .equipment-grid,
+            .awards-grid,
+            .publications-grid,
+            .patents-list,
+            .partnership-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .students-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+            
+            .student-photo {
+                width: 100px;
+                height: 125px;
+            }
+            
+            .about-keywords {
+                gap: var(--spacing-sm);
+            }
+            
+            .keyword-tag {
+                font-size: var(--font-size-xs);
+                padding: var(--spacing-xs) var(--spacing-md);
+            }
+        }
+        
         @media (max-width: 480px) {
-            .logo-text {
-                white-space: normal;
-                line-height: 1.2;
-                font-size: 0.96rem;
+            .container {
+                padding: 0 var(--spacing-sm);
+            }
+            
+            section {
+                padding: var(--spacing-3xl) 0;
+            }
+            
+            .equipment-card,
+            .partnership-card {
+                padding: var(--spacing-lg);
+            }
+            
+            .patent-item,
+            .publication-item {
+                flex-direction: column;
+                text-align: center;
             }
         }
+    
+        .nav-logo .logo-text,
+        .logo-text {
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        .nav-link.active {
+            color: var(--mckinsey-blue-primary, var(--primary));
+        }
+
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        @media (max-width: 1024px) {
+            .nav-content {
+                gap: var(--spacing-md, 1rem);
+            }
+
+            .nav-menu {
+                gap: var(--spacing-lg, 1.25rem);
+            }
+
+            .nav-logo .logo-text,
+            .logo-text {
+                font-size: var(--font-size-lg, 1.05rem);
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -328,10 +1415,12 @@
 <div class="nav-logo">
 <a class="logo-text" href="index.html">Safety &amp; Ergonomics Laboratory</a>
 </div>
-<button aria-controls="site-menu" aria-expanded="false" aria-label="메뉴 열기" class="menu-toggle" type="button">
-<span class="menu-toggle-icon">☰</span>
+<div class="nav-menu" id="primary-navigation"><a class="nav-link" href="index.html">연구실 소개</a><a class="nav-link" href="students.html">구성원</a><a class="nav-link" href="professor.html">연구</a><a aria-current="page" class="nav-link active" href="equipment.html">연구장비</a><a class="nav-link" href="mentoring.html">학생지도</a><a class="nav-link" href="gallery.html">갤러리</a><a class="nav-link" href="partnership.html">업무협약</a></div>
+<button aria-controls="primary-navigation" aria-expanded="false" aria-label="메뉴 열기" class="nav-toggle" type="button">
+<span></span>
+<span></span>
+<span></span>
 </button>
-<div class="nav-menu" id="site-menu"><a class="nav-link" href="index.html">연구실 소개</a><a class="nav-link" href="students.html">구성원</a><a class="nav-link" href="professor.html">연구</a><a aria-current="page" class="nav-link active" href="equipment.html">연구장비</a><a class="nav-link" href="mentoring.html">학생지도</a><a class="nav-link" href="gallery.html">갤러리</a><a class="nav-link" href="partnership.html">업무협약</a></div>
 </div>
 </div>
 </nav>
@@ -389,24 +1478,126 @@
 </div>
 </footer>
 <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navMenu = document.getElementById('site-menu');
+        document.addEventListener('DOMContentLoaded', function() {
+            initSmoothScrolling();
+            initMobileMenu();
+            initScrollAnimations();
+            addAccessibilityFeatures();
+        });
+        
+        function initMobileMenu() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            if (navToggle && navMenu) {
+                const updateMenuState = function(isOpen) {
+                    navMenu.classList.toggle('nav-menu--open', isOpen);
+                    navToggle.classList.toggle('nav-toggle--open', isOpen);
+                    navToggle.setAttribute('aria-expanded', String(isOpen));
+                    navToggle.setAttribute('aria-label', isOpen ? '메뉴 닫기' : '메뉴 열기');
+                };
 
-        if (menuToggle && navMenu) {
-            menuToggle.addEventListener('click', () => {
-                const isOpen = navMenu.classList.toggle('open');
-                menuToggle.setAttribute('aria-expanded', String(isOpen));
-                menuToggle.setAttribute('aria-label', isOpen ? '메뉴 닫기' : '메뉴 열기');
-            });
+                navToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
 
-            window.addEventListener('resize', () => {
-                if (window.innerWidth > 920) {
-                    navMenu.classList.remove('open');
-                    menuToggle.setAttribute('aria-expanded', 'false');
-                    menuToggle.setAttribute('aria-label', '메뉴 열기');
-                }
+                    const isOpen = navMenu.classList.contains('nav-menu--open');
+                    updateMenuState(!isOpen);
+                });
+
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        updateMenuState(false);
+                    });
+                });
+
+                document.addEventListener('click', function(e) {
+                    if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                        updateMenuState(false);
+                    }
+                });
+
+                window.addEventListener('resize', function() {
+                    if (window.innerWidth > 768) {
+                        updateMenuState(false);
+                    }
+                });
+            }
+        }
+        
+        function initSmoothScrolling() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        const offsetTop = targetElement.offsetTop - 70;
+                        
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
             });
         }
+        
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-on-scroll');
+                    }
+                });
+            }, observerOptions);
+            
+            const elementsToAnimate = document.querySelectorAll('section, .equipment-card, .award-item, .publication-item, .patent-item, .student-card, .partnership-card');
+            elementsToAnimate.forEach(el => observer.observe(el));
+        }
+        
+        function addAccessibilityFeatures() {
+            const interactiveElements = document.querySelectorAll('button, a, input, textarea');
+            
+            interactiveElements.forEach(element => {
+                element.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        if (element.tagName === 'BUTTON' || element.tagName === 'A') {
+                            element.click();
+                        }
+                    }
+                });
+            });
+            
+            const style = document.createElement('style');
+            style.textContent = `
+                *:focus {
+                    outline: 2px solid var(--mckinsey-blue-primary);
+                    outline-offset: 2px;
+                }
+                
+                .nav-link:focus::after {
+                    width: 100%;
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        document.addEventListener('error', function(e) {
+            if (e.target.tagName === 'IMG') {
+                console.log('Image failed to load:', e.target.src);
+            }
+        }, true);
     </script>
 </body>
 </html>
