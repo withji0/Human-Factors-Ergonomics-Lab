@@ -156,7 +156,7 @@
            Navigation Styles
            ========================================================================== */
         .nav {
-            position: fixed;
+            position: sticky;
             top: 0;
             left: 0;
             right: 0;
@@ -164,6 +164,16 @@
             box-shadow: var(--shadow-sm);
             z-index: 1000;
             transition: all var(--transition-normal);
+        }
+
+        #partnerships.partnership {
+            padding-top: 52px;
+        }
+
+        @media (max-width: 768px) {
+            #partnerships.partnership {
+                padding-top: 40px;
+            }
         }
         
         .nav-content {
